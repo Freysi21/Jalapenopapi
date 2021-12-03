@@ -35,7 +35,7 @@ It's not compatible with all types of dbs or tables. Currently sql server is goo
 
 ## How to use it
 
-The classes are tightly coupled with EF. In order to work, code needs to be applied, yo.
+Some code is required to function.
 
 - inherit db table model class.
 - inherit models repo class
