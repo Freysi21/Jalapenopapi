@@ -55,7 +55,7 @@ public class Example : IEntity<T> // where T is the data type of your id column 
 ```
 public class ExampleRepository : EFCoreRepository<Example, ExampleRepository, T> 
 {
-
+    // override any route here
 }
 
 ```
