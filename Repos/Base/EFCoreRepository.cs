@@ -88,7 +88,6 @@ namespace BaseRestAPI.Repos
             return await context.Set<TEntity>().ToListAsync();
         }
 
-
         public virtual async Task<PagedList<TEntity>> GetAll(PagingQuery page, string orderBy = null, bool asc = false)
         {
             var query = context.Set<TEntity>().Select(val => val);
@@ -161,7 +160,8 @@ namespace BaseRestAPI.Repos
         {
             var expr = SearchService.ContainsValues<TEntity>(dict);
 
-             var query = GetQueryWithInclude(expr).Select(entity => entity);
+            var query = GetQueryWithInclude(expr).Select(entity => entity);
+            
             if(orderBy != null && OrderbyService.PropertyExists<TEntity>(query, orderBy))
             {
                 return asc ? await PagedList<TEntity>.ToPagedListAsync(OrderbyService.OrderByProperty(query, orderBy), page.PageNumber, page.PageSize)

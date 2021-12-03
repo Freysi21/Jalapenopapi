@@ -190,54 +190,6 @@ namespace BaseRestAPI.Expressions
             return null;
         }
 
-        public static Expression<Func<T, bool>> ContainsValue<T>(string fieldName, string val)
-        {
-            var type = typeof(T);
-            var member = Expression.Parameter(type, "param");
-
-            return Expression.Lambda<Func<T, bool>>(
-                ContainsValueExpression<T>(fieldName, val, member),
-                member
-            );
-        }
-        private static Expression GetTrueExpression(Type type)
-        {
-            return Expression.Lambda(Expression.Constant(true), Expression.Parameter(type, "_"));
-        }
-
-        public static Expression<Func<T, bool>> ContainsValues<T>(Dictionary<string, string> fieldsAndValues)
-        {
-            var type = typeof(T);
-            var member = Expression.Parameter(type, "param");
-            Expression expr = null;
-
-
-            foreach (var entry in fieldsAndValues)
-            {
-                var key = entry.Key.FirstCharToUpper();
-                if (type.GetProperty(key) != null)
-                {
-                    if (expr == null)
-                    {
-                        expr = Expression.And(Expression.Constant(true), ContainsValueExpression<T>(key, entry.Value, member));
-                    }
-                    else
-                    {
-                        expr = Expression.And(expr, ContainsValueExpression<T>(key, entry.Value, member));
-                    }
-                }
-            }
-            if (expr == null)
-            {
-                return null;
-            }
-
-            return Expression.Lambda<Func<T, bool>>(
-                expr,
-                member
-            );
-        }
-
         public static Expression<Func<T, bool>> ContainsValues<T>(Dictionary<string, string[]> fieldsAndValues)
         {
             var type = typeof(T);
