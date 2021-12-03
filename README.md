@@ -16,7 +16,7 @@ This access consists of
   - Update Child Rows
 - Delete
 
-As long as the table has a defined pk named id that is not composite. 
+The table must have a defined pk named id that is not composite. 
 Or without the pk only BySearchQuery does not throw an error.
 Encapsulation is possible but modify the data throws an error.
 
