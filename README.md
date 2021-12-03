@@ -43,9 +43,10 @@ dotnet ef dbcontext scaffold "your_connection_string" -t tableName
 so they inherit IEntity. 
 
 ```
-public class Example : IEntity<T> //where T is the data type of your id column in the database
+public class Example : IEntity<T> // where T is the data type of your id column in the database
 {
     override public T Id {get; set;};
+    ...
 } 
 ```
 
@@ -64,7 +65,7 @@ public class ExampleRepository : EFCoreRepository<Example, ExampleRepository, T>
 ```
 public class ExampleController : BaseRestAPIController<Example, ExampleRepository, T> 
 {
-    //override any route here
+    // override any route here
 }
 ```
 
