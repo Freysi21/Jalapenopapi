@@ -18,15 +18,15 @@ This access consists of
 
 The table must have a defined pk named id that is not composite. 
 Otherwise BySearchQuery does not throw an error.
-Encapsulation is possible but modify the data throws an error.
+Encapsulation is possible but modifying the data throws an error.
 
 ## What its not
 
-Its not compatible with all types of dbs or tables. Currently sql server is good.
+It's not compatible with all types of dbs or tables. Currently sql server is good.
 
 ## How to use it
 
-The classes are tightly coupled with EF. In order to work code needs to be applied, yo.
+The classes are tightly coupled with EF. In order to work, code needs to be applied, yo.
 
 - inherit db table model class.
 - inherit models repo class
@@ -35,12 +35,12 @@ The classes are tightly coupled with EF. In order to work code needs to be appli
 
 ### Models
 
-Modify Models resulting from the ef scaffolding command
+Modify models resulting from the ef scaffolding command
 ```
 dotnet ef dbcontext scaffold "your_connection_string" -t tableName
 ```
 
-So they inherit IEntity. 
+so they inherit IEntity. 
 
 ```
 public class Example : IEntity<T> //where T is the data type of your id column in the database
