@@ -3,7 +3,7 @@
 ## What it is
 
 Is a library of abstract classes aimed to provide applications 
-common access to a datatable in sql server by using EF core tools.
+common access to a table in sql server by using EF core tools.
 This access consists of 
 
 - Get
@@ -19,6 +19,7 @@ This access consists of
 The table must have a defined pk named id that is not composite. 
 Otherwise BySearchQuery does not throw an error.
 Encapsulation is possible but modifying the data throws an error.
+View models work the same as a table without a pk.
 
 ## What its not
 
