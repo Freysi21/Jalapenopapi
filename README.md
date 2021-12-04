@@ -86,7 +86,7 @@ After working with databases and webservices in Windows world for 5 years I foun
 repeatedly. Creating table definitions. Scaffolding models and implementing the web CRUD stuff
 along with some search parameter thingies. I used asp-dotnet-generator for the crud stuff but
 the filtering/searching wasn't a part of that + the details part. When using different tech stacks
-like elastic or mongodb. The webservicing part had less overhead in most cases. This is my way
+like elastic or mongodb, The webservicing part has less overhead in most cases. This is my way
 of getting to live in both worlds and saving some time on the ApiController stuff. 
 
 ## How to use it
