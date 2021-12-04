@@ -1,6 +1,5 @@
-# JalapenoAPI
-
-- [JalapenoAPI](#jalapenoapi)
+# JalapenopAPI🌶️🥵
+- [JalapenopAPI🌶️🥵](#jalapenopapi️)
   - [What it is](#what-it-is)
     - [Prerequirements](#prerequirements)
       - [Entity Framework](#entity-framework)
