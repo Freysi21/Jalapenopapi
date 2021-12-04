@@ -108,7 +108,7 @@ dotnet ef dbcontext scaffold "your_connection_string" -t tableName
 so they inherit IEntity. 
 
 ```
-public class Example : IEntity<T> // where T is the data type of your id column in the database
+public class Example : IEntity<T> // where T is the data type of the id column in the database
 {
     override public T Id {get; set;};
     ...
@@ -118,7 +118,7 @@ public class Example : IEntity<T> // where T is the data type of your id column 
 #### ModelAttributes
 
 Scaffolded models need to be decorated with attributes. one to- relation should be decorated with SingleNavigation and many to- should be decorated with Navigation.
-DefaultSort is the column you want to result 
+DefaultSort effects List queries and there default order.
 
 #### Circular Reference
 
