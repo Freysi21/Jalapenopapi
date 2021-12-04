@@ -146,8 +146,3 @@ public class ExampleController : BaseRestAPIController<Example, ExampleRepositor
 ### Startup
 
 Add `app.AddScoped<ExampleRepository>` to ur startup ConfigureServices function.
-
-## Special thanks
-
-This would not have been if not for stackoverflow. 
-https://stackoverflow.com/questions/2841585/create-linq-to-entities-orderby-expression-on-the-fly
