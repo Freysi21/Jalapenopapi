@@ -16,7 +16,6 @@
     - [Repo](#repo)
     - [Controllers](#controllers)
     - [Startup](#startup)
-  - [Special thanks](#special-thanks)
   
 ## What it is
 
