@@ -1,4 +1,4 @@
-# JalapenopAPI ## 🌶️🥵
+# JalapenopAPI 🌶️🥵
 - [JalapenopAPI🌶️🥵](#jalapenopapi️)
   - [What it is](#what-it-is)
     - [Prerequirements](#prerequirements)
