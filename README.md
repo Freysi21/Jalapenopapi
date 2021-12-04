@@ -34,7 +34,7 @@ This access consists of
   - Update Child Rows
 - Delete (DELETE)
 
-It's worth to mention three things. By Details means any foreign key relations 
+By Details means any foreign key relations 
 in other tables will be returned as nested property of the body response.
 Search Query supports primitive types such as strings, guids and numbers. It also 
 supports date range queries. It will always default to creating AND clauses for
@@ -122,7 +122,8 @@ DefaultSort is the column you want to result
 
 #### Circular Reference
 
-
+When scaffolded, models will contain reference to each other if they are related. So you need to remove it from one of them. If needed, you can create a duplicated class of
+a table for a workaround. 
 
 ### Repo
 
@@ -131,7 +132,6 @@ public class ExampleRepository : EFCoreRepository<Example, ExampleRepository, T>
 {
     // override any route here
 }
-
 ```
 
 ### Controllers
