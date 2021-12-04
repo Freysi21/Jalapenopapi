@@ -68,7 +68,7 @@ View models work the same as a table without a pk.
 
 I went about this the first time with composite key support. Shits hard. I love natural keys but
 I have resulted to surrogates just because of this package. I still apply unique constraints on
-natural keys. It's easier with the tools EF. Not that EF is not handling it. My implementation 
+natural keys. It's easier with the tools. Not that EF is not handling it. My implementation 
 just hasn't gotten there.  
 
 #### Tools
