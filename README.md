@@ -35,7 +35,7 @@ This access consists of
   - Update Child Rows
 - Delete (DELETE)
 
-It's worth to mention three things. By Details means any foreign key relations 
+By Details means any foreign key relations 
 in other tables will be returned as nested property of the body response.
 Search Query supports primitive types such as strings, guids and numbers. It also 
 supports date range queries. It will always default to creating AND clauses for
