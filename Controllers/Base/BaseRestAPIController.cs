@@ -3,7 +3,6 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using BaseRestAPI.Repos;
-using BaseRestAPI.DTOs;
 using BaseRestAPI.Model;
 using Newtonsoft.Json;
 using System;
@@ -58,7 +57,7 @@ namespace BaseRestAPI.Controllers
         // PUT: api/[controller]/5
         //Updates a specific record with the TEntity item received.
         [HttpPut("{id}")]
-        public virtual async Task<ActionResult<HttpResponse<TEntity>>> Put(IDType id, TEntity item)
+        public virtual async Task<ActionResult<TEntity>> Put(IDType id, TEntity item)
         {
             if (!ModelState.IsValid)
             {
@@ -79,19 +78,17 @@ namespace BaseRestAPI.Controllers
         // POST: api/[controller]
         // Inserts the received item as a new record
         [HttpPost]
-        public virtual async Task<ActionResult<HttpResponse<TEntity>>> Post(TEntity item)
+        public virtual async Task<ActionResult<TEntity>> Post(TEntity item)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
-            var response = new HttpResponse<TEntity>();
 
             try
             {
                 var newItem = await repository.Add(item);
-                response.Item = newItem;
-                return CreatedAtAction("Get", new { id = newItem.Id }, response);
+                return CreatedAtAction("Get", new { id = newItem.Id }, newItem);
             }
             catch (DbUpdateException ex)
             {
