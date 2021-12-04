@@ -123,7 +123,8 @@ DefaultSort is the column you want to result
 
 #### Circular Reference
 
-
+When scaffolded, models will contain reference to each other if they are related. So you need to remove it from one of them. If needed, you can create a duplicated class of
+a table for a workaround. 
 
 ### Repo
 
@@ -132,7 +133,6 @@ public class ExampleRepository : EFCoreRepository<Example, ExampleRepository, T>
 {
     // override any route here
 }
-
 ```
 
 ### Controllers
