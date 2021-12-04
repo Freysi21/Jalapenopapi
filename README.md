@@ -74,7 +74,7 @@ just hasn't gotten there.
 #### Tools
 
 Under Expressions sql builders are available and can be used with linq IQueryable. 
-PagedList also adds skip take tokens to translatable queries. 
+PagedList also adds skip take tokens to queries. 
 
 ## What its not
 
