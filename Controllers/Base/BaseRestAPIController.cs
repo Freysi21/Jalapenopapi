@@ -2,21 +2,21 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using BaseRestAPI.Repos;
-using BaseRestAPI.Model;
+using JalapenopAPI.Repos;
+using JalapenopAPI.Model;
 using Newtonsoft.Json;
 using System;
 //File contains base implementation for CRUD(CREATE READ UPDATE DELETE) operations for a table.
-namespace BaseRestAPI.Controllers
+namespace JalapenopAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public abstract class BaseRestAPIController<TEntity, TRepository, IDType> : ControllerBase
+    public abstract class JalapenopAPIController<TEntity, TRepository, IDType> : ControllerBase
         where TEntity : IEntity<IDType>
         where TRepository : IRepository<TEntity, IDType>
     {
         protected readonly TRepository repository;
-        public BaseRestAPIController(TRepository repository)
+        public JalapenopAPIController(TRepository repository)
         {
             this.repository = repository;
         }

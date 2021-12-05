@@ -17,7 +17,7 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "BaseRestAPI": {
+    "JalapenopAPI": {
       "commandName": "Project",
       "launchBrowser": false,
       "launchUrl": "api/values",

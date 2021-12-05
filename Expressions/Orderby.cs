@@ -7,7 +7,7 @@ using Newtonsoft.Json;
 using System.Linq.Expressions;
 using Microsoft.EntityFrameworkCore;
 
-namespace BaseRestAPI.Expressions
+namespace JalapenopAPI.Expressions
 {
     public static class OrderBy
     {

@@ -2,19 +2,19 @@
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using BaseRestAPI.Model;
+using JalapenopAPI.Model;
 using System.Linq;
 using System.Linq.Expressions;
-using BaseRestAPI.Helpers;
-using SearchService = BaseRestAPI.Expressions.Search;
-using IncludeService = BaseRestAPI.Expressions.Include;
-using OrderbyService = BaseRestAPI.Expressions.OrderBy;
-using RangeService = BaseRestAPI.Expressions.Range;
+using JalapenopAPI.Helpers;
+using SearchService = JalapenopAPI.Expressions.Search;
+using IncludeService = JalapenopAPI.Expressions.Include;
+using OrderbyService = JalapenopAPI.Expressions.OrderBy;
+using RangeService = JalapenopAPI.Expressions.Range;
 using System;
 using System.Reflection;
 //Abstract implementation of a data repository relying on the Entity framework.
 //Implements common procedures by utilizing linq query language.
-namespace BaseRestAPI.Repos
+namespace JalapenopAPI.Repos
 {
     public abstract class EFCoreRepository<TEntity, TContext, IDType> : IRepository<TEntity, IDType>
         where TEntity : IEntity<IDType>

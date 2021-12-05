@@ -1,10 +1,10 @@
 
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using BaseRestAPI.Model;
-using BaseRestAPI.Helpers;
+using JalapenopAPI.Model;
+using JalapenopAPI.Helpers;
 
-namespace BaseRestAPI.Repos
+namespace JalapenopAPI.Repos
 {
     //Generic repository interface. States common methods too implement to fit into
     //the generic repository pattern.

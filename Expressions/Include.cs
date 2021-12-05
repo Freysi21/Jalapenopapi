@@ -6,7 +6,7 @@ using Newtonsoft.Json;
 
 using Microsoft.EntityFrameworkCore;
 
-namespace BaseRestAPI.Expressions
+namespace JalapenopAPI.Expressions
 {
     public static class Include
     {

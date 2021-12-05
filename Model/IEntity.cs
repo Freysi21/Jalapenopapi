@@ -1,4 +1,4 @@
-namespace BaseRestAPI.Model
+namespace JalapenopAPI.Model
 {
     //Base interface for all models used on api too implement
     //Each model will implement this interface so the generic repository

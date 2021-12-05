@@ -136,7 +136,7 @@ public class ExampleRepository : EFCoreRepository<Example, ExampleRepository, T>
 ### Controllers
 
 ```
-public class ExampleController : BaseRestAPIController<Example, ExampleRepository, T> 
+public class ExampleController : JalapenopAPIController<Example, ExampleRepository, T> 
 {
     // override any route here
 }

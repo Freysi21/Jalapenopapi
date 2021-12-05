@@ -1,4 +1,4 @@
-namespace BaseRestAPI.Helpers
+namespace JalapenopAPI.Helpers
 {
     public class AppSettings
     {

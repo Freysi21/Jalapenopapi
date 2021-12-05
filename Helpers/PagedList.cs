@@ -4,7 +4,7 @@ using System;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 
-namespace BaseRestAPI.Helpers
+namespace JalapenopAPI.Helpers
 {
     public class PagedList<T> : List<T>
     where T : class
