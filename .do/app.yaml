@@ -1,0 +1,11 @@
+name: jalapenopapiexample
+services:
+- name: api
+  environment_slug: dotnet
+  github:
+    repo: freysi21/jalapenopapi
+    branch: main
+    deploy_on_push: true
+  source_dir: Example
+  routes:
+  - path: /Example
