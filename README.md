@@ -1,4 +1,4 @@
-# JalapenopAPI🌶️🥵
+# JalapenopAPI 🌶🥵
 - [JalapenopAPI🌶️🥵](#jalapenopapi️)
   - [What it is](#what-it-is)
     - [Prerequirements](#prerequirements)
@@ -16,7 +16,6 @@
     - [Repo](#repo)
     - [Controllers](#controllers)
     - [Startup](#startup)
-  - [Special thanks](#special-thanks)
   
 ## What it is
 
@@ -68,13 +67,13 @@ View models work the same as a table without a pk.
 
 I went about this the first time with composite key support. Shits hard. I love natural keys but
 I have resulted to surrogates just because of this package. I still apply unique constraints on
-natural keys. It's easier with the tools EF. Not that EF is not handling it. My implementation 
+natural keys. It's easier with the tools. Not that EF is not handling it. My implementation 
 just hasn't gotten there.  
 
 #### Tools
 
 Under Expressions sql builders are available and can be used with linq IQueryable. 
-PagedList also adds skip take tokens to translatable queries. 
+PagedList also adds skip take tokens to queries. 
 
 ## What its not
 
@@ -86,7 +85,7 @@ After working with databases and webservices in Windows world for 5 years I foun
 repeatedly. Creating table definitions. Scaffolding models and implementing the web CRUD stuff
 along with some search parameter thingies. I used asp-dotnet-generator for the crud stuff but
 the filtering/searching wasn't a part of that + the details part. When using different tech stacks
-like elastic or mongodb. The webservicing part had less overhead in most cases. This is my way
+like elastic or mongodb, The webservicing part has less overhead in most cases. This is my way
 of getting to live in both worlds and saving some time on the ApiController stuff. 
 
 ## How to use it
@@ -108,7 +107,7 @@ dotnet ef dbcontext scaffold "your_connection_string" -t tableName
 so they inherit IEntity. 
 
 ```
-public class Example : IEntity<T> // where T is the data type of your id column in the database
+public class Example : IEntity<T> // where T is the data type of the id column in the database
 {
     override public T Id {get; set;};
     ...
@@ -118,7 +117,7 @@ public class Example : IEntity<T> // where T is the data type of your id column 
 #### ModelAttributes
 
 Scaffolded models need to be decorated with attributes. one to- relation should be decorated with SingleNavigation and many to- should be decorated with Navigation.
-DefaultSort is the column you want to result 
+DefaultSort effects List queries and there default order.
 
 #### Circular Reference
 
@@ -146,8 +145,3 @@ public class ExampleController : BaseRestAPIController<Example, ExampleRepositor
 ### Startup
 
 Add `app.AddScoped<ExampleRepository>` to ur startup ConfigureServices function.
-
-## Special thanks
-
-This would not have been if not for stackoverflow. 
-https://stackoverflow.com/questions/2841585/create-linq-to-entities-orderby-expression-on-the-fly
