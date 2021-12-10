@@ -1,3 +1,6 @@
+## WIP
+As soon as I've gotten written agreement from my employer that open sourcing is ok I will push this as a package to nuget.org
+To so to try it out you have to checkout the repo and add it as referenced project in solution or build the project and reference the artifact in your proj.
 # JalapenopAPI 🌶🥵
 - [JalapenopAPI🌶️🥵](#jalapenopapi️)
   - [What it is](#what-it-is)
