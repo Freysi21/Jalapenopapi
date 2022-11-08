@@ -81,7 +81,7 @@ PagedList also adds skip take tokens to queries.
 
 ## What its not
 
-It's not compatible with all types of dbs or tables. Currently sql server is good.
+It's not compatible with all types of dbs. Currently sql server is good.
 
 ## Why
 
