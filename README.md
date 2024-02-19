@@ -25,7 +25,7 @@ So to try it out you have to checkout the repo and add it as referenced project 
 ## What it is
 
 Is a library of abstract classes aimed to provide applications 
-common access to a table in sql server by using EF core tools.
+common access to a table or view in sql server by using EF core tools.
 This access consists of 
 
 - Get
