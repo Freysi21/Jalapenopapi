@@ -20,6 +20,7 @@ So to try it out you have to checkout the repo and add it as referenced project 
     - [Repo](#repo)
     - [Controllers](#controllers)
     - [Startup](#startup)
+  -  [Thanks to our lord and saviour Jon Skeet](#jon-skeet)
   
 ## What it is
 
@@ -149,3 +150,8 @@ public class ExampleController : JalapenopAPIController<Example, ExampleReposito
 ### Startup
 
 Add `app.AddScoped<ExampleRepository>` to ur startup ConfigureServices function.
+
+
+### Jon Skeet
+
+Most of this is either inspired or copy pasted from answers by Jon Skeet the csharp saviour.
