@@ -1,7 +1,7 @@
 ## WIP
-I'm in the process of pushin to nuget.org
-
+This copy is outdated. I've updated to dotnet6. I've added a bunch of new features. Just need to give myself the time to move all development from my work environment to here. 
 So to try it out you have to checkout the repo and add it as referenced project in solution or build the project and reference the artifact in your proj.
+
 # JalapenopAPI 🌶🥵
 - [JalapenopAPI🌶️🥵](#jalapenopapi️)
   - [What it is](#what-it-is)
